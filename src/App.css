@@ -1,0 +1,377 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+:root {
+  --color-page: #f4f6f8;
+  --color-surface: #ffffff;
+  --color-surface-muted: #f8fafc;
+  --color-text: #172033;
+  --color-text-muted: #667085;
+  --color-border: #d9e1ea;
+  --color-nav: #101828;
+  --color-accent: #2563eb;
+  --color-accent-dark: #1d4ed8;
+  --color-accent-soft: #eff6ff;
+  --color-warning: #f59e0b;
+  --font-family-base: Arial, Helvetica, sans-serif;
+  --font-family-heading: Arial, Helvetica, sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --shadow-soft: 0 10px 30px rgba(16, 24, 40, 0.08);
+  --shadow-subtle: 0 1px 3px rgba(16, 24, 40, 0.1);
+}
+
+/* Simple browser reset */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  font-size: 16px;
+  background: var(--color-page);
+  color: var(--color-text);
+  font-family: var(--font-family-base);
+}
+.App {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  align-items: center;
+  background: var(--color-nav);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  min-height: 64px;
+  padding: 0 32px;
+ }
+
+ footer {
+  margin-top:auto;
+  background: #222;
+  padding: 40px;
+  text-align: center;
+  color: #d8d8d8;
+ }
+ 
+/* Styling for Home */
+ .cinema-sizing {
+  width: 100vw;
+  height: vh;
+  object-fit: cover;
+}
+
+ .cinema {
+  
+  background-color: black;
+  color: white;
+  min-height: 100vh; /* ensures it covers the full viewport */
+}
+
+
+ .app-container {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.app-container > main {
+  flex: 1;
+}
+
+
+/* Icon */
+#icon {
+  align-items: center;
+  color: #fff;
+  display: flex;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0;
+}
+
+#icon img {
+  height: 38px;
+  width: 38px;
+  border-radius: 3px;
+  object-fit: cover;
+}
+
+
+
+nav ul li {
+  display: inline-block;
+ }
+
+ nav {
+  display: flex;
+  justify-content: flex-end;    
+           
+ }
+
+ nav ul {
+  align-items: center;
+  display: flex;
+  gap: 6px;
+  padding: 0;
+  margin: 0;
+}
+
+ nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  border-bottom: 2px solid transparent;
+  transition: 0.3s ease all;                                
+ }
+
+ nav ul li a:hover {
+  background: rgba(255, 255, 255, 0.08);                    
+}
+
+nav ul li a.active {
+  color: #93c5fd;
+  border-bottom-color: var(--color-accent);
+}
+
+.transparent-button {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.transparent-button:hover {
+  background: rgba(255, 255, 255, 0.08); 
+}
+
+.transparent-button.active {
+  color: #93c5fd;
+  border-bottom: 2px solid var(--color-accent);
+}
+
+/* Styling for Individual Movie Page */
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.top-row {
+  display: flex;
+  
+}
+
+.content {
+  display: flex;
+  flex-direction: column; 
+  width: 40vw; 
+  align-items: center; 
+  
+  padding: 2%;
+  margin-left:auto;
+  
+
+
+}
+
+.rightside {
+  display: flex;
+  flex-direction: column;  
+  width: 40vw; 
+  align-items: center; 
+  justify-content: center;
+  padding: 2%;
+  
+  margin-right:auto; 
+
+
+}
+
+.poster {
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1)
+}
+
+.ratings {
+  display: flex;
+  margin-top: auto;
+  flex-direction: column; 
+  
+  margin-bottom: 30px;
+  margin: auto;
+  width: 15vw;
+  
+  border: 1px solid #424242;
+  border-radius: 12px;
+  background-color: #dddddd;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.grid {
+  
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  flex-direction: column; 
+  padding: 1rem;  
+  margin-right: auto; 
+  width: 52vw;
+  
+
+  border: 1px solid #424242;
+  border-radius: 12px;
+  background-color: #dddddd;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.bottomRow {
+  
+  display: flex;
+
+  padding: 1rem;  
+  margin: auto; 
+  width: 80vw;
+ 
+
+
+}
+
+
+
+
+.card {
+  
+    /* Card styling */
+    border: 1px solid #424242;
+    border-radius: 12px;
+    background-color: #dddddd;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.pageContainer {
+  
+  width: 80vw;
+  margin: 16px auto; 
+  
+  border: 5px solid #666666;
+  border-radius: 12px;
+  background-color: #cac8c8;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.BackButton {
+  display: block;
+  margin: 16px auto; 
+  
+  font-size: 18px;
+  width: 100px;   /* optional */
+  height: 30px;   /* optional */
+}
+
+/* Styling for Movie Page */
+.searchButton {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;  
+}
+
+.inline {
+  display: flex; 
+  align-items: center;
+  gap: 4px;
+}
+
+
+
+
+
+/* Styling for Login */
+.loginButton {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;  
+  
+}
+
+/* Styling for register*/
+.registerContainer {
+  display: flex;
+  flex-direction: column; 
+   
+  align-items: center; 
+
+  
+}
+
+.RegisterButton {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;  
+}
+
+.inputs {
+  
+  width: 40vw;
+  margin: 16px auto; 
+  
+  border: 5px solid #666666;
+  border-radius: 12px;
+  background-color: #b6b6b6;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.SearchSection {
+  display: flex;
+  flex-direction: column;
+  
+  width: 30vw;
+  align-items: flex-end; /* aligns vertically */
+  gap: 8px;            /* space between input and button */
+  
+}
+
+.SearchInput {
+  flex: 1;              /* optional: makes it expand */
+  padding: 8px;
+}
+
+.SearchButton {
+  padding: 8px 16px;
+}
+
+/* Styling for person's page*/
+.personContainer {
+  display: flex;
+  flex-direction: column; 
+   
+  align-items: center; 
+
+  
+}
+
+.chart {
+  display: flex;
+  flex-direction: column; 
+  height: "100vw";
+  width: "100vw";
+
+  align-items: center; 
+}

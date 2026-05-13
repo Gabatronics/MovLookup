@@ -1,0 +1,235 @@
+.home-page {
+  background: #050505;
+  color: #fff;
+  flex: 1;
+  text-align: left;
+}
+
+.home-hero {
+
+  display: grid;
+
+  overflow: hidden;
+  position: relative;
+}
+
+.home-hero::after {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.84), rgba(0, 0, 0, 0.28));
+  content: "";
+  inset: 0;
+  position: absolute;
+}
+
+.home-hero-copy {
+  align-self: center;
+  max-width: 720px;
+  padding: 64px 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.home-hero-copy h1 {
+  font-size: 56px;
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
+  margin: 0 0 16px;
+}
+
+.home-hero-copy p {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 22px;
+  margin: 0;
+}
+
+.top-rated-section {
+  padding: 48px 40px 64px;
+}
+
+.top-rated-header {
+  align-items: end;
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+  margin-bottom: 26px;
+}
+
+.top-rated-header h2 {
+  color: #facc15;
+  font-size: 38px;
+  font-weight: var(--font-weight-bold);
+  line-height: 1.15;
+  margin: 0 0 10px;
+}
+
+.top-rated-header p,
+.top-rated-status {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 18px;
+  margin: 0;
+}
+
+.top-rated-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.top-rated-controls button {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: var(--radius-md);
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  height: 44px;
+  justify-content: center;
+  width: 44px;
+}
+
+.top-rated-controls button:hover,
+.top-rated-controls button:focus {
+  background: rgba(37, 99, 235, 0.72);
+  border-color: rgba(147, 197, 253, 0.9);
+}
+
+.top-rated-carousel {
+  display: grid;
+  gap: 22px;
+  grid-auto-columns: 250px;
+  grid-auto-flow: column;
+  overflow-x: auto;
+  padding: 4px 0 18px;
+  scroll-behavior: smooth;
+  scroll-snap-type: x proximity;
+}
+
+.top-rated-carousel::-webkit-scrollbar {
+  height: 10px;
+}
+
+.top-rated-carousel::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+}
+
+.top-rated-carousel::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 999px;
+}
+
+.top-movie-card {
+  background: #181818;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.32);
+  cursor: pointer;
+  min-height: 430px;
+  overflow: hidden;
+  scroll-snap-align: start;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.top-movie-card:hover,
+.top-movie-card:focus-within {
+  box-shadow: 0 22px 46px rgba(37, 99, 235, 0.22);
+  transform: translateY(-4px);
+}
+
+.top-movie-poster {
+  aspect-ratio: 2 / 3;
+  background: #101828;
+  overflow: hidden;
+  position: relative;
+}
+
+.top-movie-poster img,
+.top-movie-placeholder {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.top-movie-placeholder {
+  align-items: center;
+  background: linear-gradient(145deg, #111827, var(--color-accent));
+  color: #fff;
+  display: flex;
+  font-size: 72px;
+  font-weight: var(--font-weight-bold);
+  justify-content: center;
+}
+
+.top-movie-rank {
+  background: rgba(0, 0, 0, 0.72);
+  border-bottom-right-radius: var(--radius-md);
+  color: #facc15;
+  font-size: 18px;
+  font-weight: var(--font-weight-bold);
+  left: 0;
+  padding: 10px 12px;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+.top-movie-info {
+  padding: 16px 16px 18px;
+}
+
+.top-movie-rating {
+  align-items: center;
+  color: #facc15;
+  display: flex;
+  font-size: 18px;
+  font-weight: var(--font-weight-semibold);
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.top-movie-info h3 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: var(--font-weight-bold);
+  line-height: 1.25;
+  margin: 0 0 10px;
+}
+
+.top-movie-info p {
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 15px;
+  margin: 0;
+}
+
+@media (max-width: 760px) {
+  .home-hero {
+    min-height: 340px;
+  }
+
+  .home-hero-copy {
+    padding: 48px 24px;
+  }
+
+  .home-hero-copy h1 {
+    font-size: 40px;
+  }
+
+  .home-hero-copy p {
+    font-size: 18px;
+  }
+
+  .top-rated-section {
+    padding: 36px 20px 48px;
+  }
+
+  .top-rated-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .top-rated-header h2 {
+    font-size: 30px;
+  }
+
+  .top-rated-carousel {
+    grid-auto-columns: 220px;
+  }
+}
