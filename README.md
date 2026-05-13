@@ -4,10 +4,12 @@
 
 MovLookup is a React movie discovery app built for searching, comparing, and exploring movie data. The app gives users a fast way to browse films, inspect detailed ratings, view cast and crew information, and explore actor/crew analytics through charts.
 
+The frontend consumes a serverless REST API that I built and hosted on Railway. The API repository is available here: [moviesAPI](https://github.com/Gabatronics/moviesAPI). Because the API is serverless, the first request may take a moment while the service starts up.
+
 ## Project Highlights
 
 - Built a responsive React single-page application with Vite and React Router.
-- Integrated a remote movie API for search results, movie details, people lookup, authentication, and token refresh flows.
+- Integrated a Railway-hosted serverless REST API for search results, movie details, people lookup, authentication, and token refresh flows.
 - Implemented an interactive movie search table with AG Grid, server-backed pagination, filtering, sorting, and row preview details.
 - Designed top-rated movie carousels for IMDb, Rotten Tomatoes, and Metacritic rankings.
 - Added detailed movie pages with posters, ratings, overview, box office data, cast/crew tables, and IMDb links.
@@ -24,6 +26,7 @@ MovLookup is a React movie discovery app built for searching, comparing, and exp
 - Bootstrap / Reactstrap
 - Lucide React icons
 - Vercel deployment
+- Railway-hosted serverless REST API
 
 ## Features
 
@@ -83,7 +86,9 @@ npm run preview
 
 ## Deployment Notes
 
-This project is deployed on Vercel. Because Vite exposes client-side environment variables at build time, the API URL must be configured in Vercel as:
+This project is deployed on Vercel and connects to a serverless REST API hosted on Railway. Because serverless services can have cold starts, the first API request after a period of inactivity may be slightly delayed.
+
+Because Vite exposes client-side environment variables at build time, the API URL must be configured in Vercel as:
 
 ```bash
 VITE_MOVIE_API_URL=https://moviesapi-production-ea55.up.railway.app
